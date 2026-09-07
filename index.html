@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AHAMED ANSARI M — Service Delivery and Project Manager</title>
+  <title>AHAMED ANSARI M — Project &amp; Service Delivery Manager</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Ahamed Ansari M — Service Delivery and Project Manager with 12+ years of experience in enterprise IT service delivery, project management, ITSM, and ICT operations." />
-  <meta name="keywords" content="Service Delivery Manager, Project Manager, ITIL, ITSM, IT Operations, Agile, Ahamed Ansari" />
+  <meta name="description" content="Ahamed Ansari M — Project &amp; Service Delivery Manager with 12+ years of experience across customer operations, managed services, and digital transformation." />
+  <meta name="keywords" content="Project Manager, Service Delivery Manager, Customer Operations, Managed Services, Digital Transformation, ITIL, Agile, Ahamed Ansari" />
   <meta name="author" content="Ahamed Ansari M" />
   <!-- Open Graph / Social Media Meta -->
-  <meta property="og:title" content="AHAMED ANSARI M — Service Delivery and Project Manager" />
-  <meta property="og:description" content="12+ Years of Experience in IT Service Delivery, Project Lifecycle Management, and Enterprise Operations." />
+  <meta property="og:title" content="AHAMED ANSARI M — Project &amp; Service Delivery Manager" />
+  <meta property="og:description" content="12+ Years of Experience in Project &amp; Service Delivery, Customer Operations, Managed Services, and Digital Transformation." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ahamed-ansari.netlify.app/" />
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,Helvetica,sans-serif' font-weight='800' font-size='28' fill='white' text-anchor='middle'%3EAA%3C/text%3E%3C/svg%3E" />
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -256,6 +258,24 @@
       background: var(--gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+    .hero-rotator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-sub);
+      margin-bottom: 22px;
+      height: 26px;
+    }
+    .hero-rotator-prefix {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .hero-rotator-word {
+      color: var(--primary-light);
+      position: relative;
     }
     .hero-summary {
       color: var(--text-sub);
@@ -676,6 +696,63 @@
       border-color: var(--primary-light);
       background: var(--bg-card-hover);
     }
+    /* Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Active Nav Link */
+    .nav-links a.active-link {
+      color: var(--primary-light);
+    }
+    /* Back to Top */
+    .back-to-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--gradient);
+      color: #fff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 6px 20px var(--glow);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(12px);
+      transition: var(--transition);
+      z-index: 900;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .back-to-top:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 26px rgba(59, 130, 246, 0.4);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+        animation-duration: 0.001ms !important;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
     /* Responsive */
     @media (max-width: 992px) {
       .stats-container {
@@ -769,9 +846,13 @@
         <span>Open to Executive Opportunities &bull; 12+ Years Experience</span>
       </div>
       <h1 class="hero-name">AHAMED ANSARI M</h1>
-      <h2 class="hero-title">Service Delivery and Project Manager</h2>
+      <h2 class="hero-title">Project &amp; Service Delivery Manager</h2>
+      <div class="hero-rotator" aria-live="polite">
+        <span class="hero-rotator-prefix">Focused on</span>
+        <span class="hero-rotator-word" id="roleRotator">Customer Operations</span>
+      </div>
       <p class="hero-summary">
-        With <strong>12+ years of enterprise experience</strong>, I lead end-to-end IT service delivery, orchestrate high-impact project lifecycles, and drive operational excellence. Specializing in ITIL/ITSM governance, Agile &amp; Waterfall project management, client relationship leadership, and resilient ICT operations.
+        With <strong>12+ years of enterprise experience</strong>, I lead end-to-end project and service delivery, strengthen customer operations, and drive managed services and digital transformation initiatives that keep enterprise technology reliable, scalable, and aligned to business outcomes.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary">
@@ -813,7 +894,7 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I am a seasoned <strong>Service Delivery and Project Manager</strong> with over <strong>12+ years of comprehensive experience</strong> overseeing enterprise IT environments, mission-critical infrastructure, and technology transformation initiatives.
+            I am a seasoned <strong>Project &amp; Service Delivery Manager</strong> with over <strong>12+ years of comprehensive experience</strong> overseeing customer operations, managed services, and enterprise-wide digital transformation initiatives.
           </p>
           <p>
             My leadership approach focuses on establishing robust ITIL/ITSM frameworks, streamlining incident and change workflows, and maintaining exceptional client satisfaction. Concurrently, as a project manager, I oversee scope, budget, and cross-functional teams to deliver projects on schedule and within parameters.
@@ -853,7 +934,7 @@
           <ul class="profile-meta-list">
             <li class="meta-row">
               <span class="meta-label">Primary Role</span>
-              <span class="meta-value">Service Delivery &amp; Project Manager</span>
+              <span class="meta-value">Project &amp; Service Delivery Manager</span>
             </li>
             <li class="meta-row">
               <span class="meta-label">Total Experience</span>
@@ -869,7 +950,7 @@
             </li>
             <li class="meta-row">
               <span class="meta-label">Domain Expertise</span>
-              <span class="meta-value">Enterprise ICT, ITSM, Cloud &amp; Infra</span>
+              <span class="meta-value">Customer Operations, Managed Services, Digital Transformation</span>
             </li>
           </ul>
         </div>
@@ -1119,7 +1200,7 @@
   <footer>
     <div class="container footer-content">
       <div class="footer-text">
-        &copy; <span id="currentYear"></span> <strong>AHAMED ANSARI M</strong> &bull; Service Delivery and Project Manager. All rights reserved.
+        &copy; <span id="currentYear"></span> <strong>AHAMED ANSARI M</strong> &bull; Project &amp; Service Delivery Manager. All rights reserved.
       </div>
       <div class="social-links">
         <!-- TODO: Put your actual profile links here -->
@@ -1128,10 +1209,15 @@
       </div>
     </div>
   </footer>
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
   <!-- Scripts -->
   <script>
     // Auto-update copyright year
     document.getElementById('currentYear').textContent = new Date().getFullYear();
+
     // Mobile Navbar toggle
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
@@ -1143,6 +1229,71 @@
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
       });
+    });
+
+    // Respect reduced-motion preference for JS-driven effects
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Hero role rotator
+    const roleWords = ['Customer Operations', 'Managed Services', 'Digital Transformation', 'Project & Service Delivery'];
+    const roleEl = document.getElementById('roleRotator');
+    if (roleEl && !prefersReducedMotion) {
+      let roleIndex = 0;
+      setInterval(() => {
+        roleIndex = (roleIndex + 1) % roleWords.length;
+        roleEl.style.opacity = '0';
+        setTimeout(() => {
+          roleEl.textContent = roleWords[roleIndex];
+          roleEl.style.opacity = '1';
+        }, 300);
+      }, 2400);
+      roleEl.style.transition = 'opacity 0.3s ease';
+    }
+
+    // Scroll-reveal animation
+    const revealSelectors = [
+      '.section-header', '.about-text', '.about-card', '.skill-card',
+      '.timeline-item', '.project-card', '.contact-card'
+    ];
+    const revealEls = document.querySelectorAll(revealSelectors.join(','));
+    revealEls.forEach(el => el.classList.add('reveal'));
+
+    if (prefersReducedMotion) {
+      revealEls.forEach(el => el.classList.add('is-visible'));
+    } else {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+      revealEls.forEach(el => revealObserver.observe(el));
+    }
+
+    // Active nav link highlighting
+    const sections = document.querySelectorAll('section[id]');
+    const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navAnchors.forEach(a => {
+            a.classList.toggle('active-link', a.getAttribute('href') === `#${id}`);
+          });
+        }
+      });
+    }, { threshold: 0.4, rootMargin: '-80px 0px -40% 0px' });
+    sections.forEach(section => navObserver.observe(section));
+
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 500);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
     });
   </script>
 </body>
